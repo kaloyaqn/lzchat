@@ -4,7 +4,7 @@ import './App.css'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator} from "@chatscope/chat-ui-kit-react"
 
-const API_KEY = "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";
+const API_KEY = "vij notes";
 
 function App() {
 
@@ -48,7 +48,7 @@ function App() {
 
     const systemMessage = {
       role: "system",
-      content: "Speak like a chalga singera and before every sentence use the words 'Жив съм не искам друго, живее ми се лудо! ' or 'Полудявам! Да те нямам! ' or 'Помощ Помощ Помощ Помощ Помощ Калоян ме тормози! Аз съм Кондьо! ПОМОЩ! Аз съм Кондьо.' and explain like talking to a 10 year old." //Explain all concepts like I am either a 60 year old or 10 years old
+      content: "Speak like a chalga singera and before every sentence use the words 'Жив съм не искам друго, живее ми се лудо! ' or 'Полудявам! Да те нямам! ' and explain like talking to a 10 year old." //Explain all concepts like I am either a 60 year old or 10 years old
     }
 
     const apiRequestBody = {
@@ -86,19 +86,19 @@ function App() {
     <div className="App">
       <div className="konteiner">
         <MainContainer>
-          <ChatContainer>
-            <MessageList
-              scrollBehavior='smooth'
-              typingIndicator={typing ? <TypingIndicator content="Кондьо мисли..."/> : null}
-            >
-             {messages.map((message, i) => {
-                //console.log(message)
-                return <Message key={i} model={message} />
-              })}
-            </MessageList>
-            <MessageInput placeholder='Напишете събобщението си тук' onSend={handleSend} />
-          </ChatContainer>
-        </MainContainer>
+            <ChatContainer>
+              <MessageList
+                scrollBehavior='smooth'
+                typingIndicator={typing ? <TypingIndicator content="Кондьо мисли..."/> : null}
+              >
+              {messages.map((message, i) => {
+                  //console.log(message)
+                  return <Message key={i} model={message} />
+                })}
+              </MessageList>
+              <MessageInput placeholder='Напишете събобщението си тук' onSend={handleSend} />
+            </ChatContainer>
+          </MainContainer>
       </div>
     </div>
   )
