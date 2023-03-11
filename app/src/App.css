@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+.konteiner {
+  position: relative;
+  height:800px;
+  width:700px;
+}
+
+.cs-message-input__content-editor {
+	text-align: left !important;
+}
+
+.cs-main-container {
+  border-radius: 5px;
+}
+
+.cs-message__html-content {
+  text-align: left;
+}
